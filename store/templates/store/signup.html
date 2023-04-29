@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'store/forms.css' %}">
+    <title>signup</title>
+</head>
+<body>
+    <h2>signup form</h2>
+    <div class="form">
+        <form action="{% url 'signup' %}" method="post">
+            {% csrf_token %}
+            <div class="top">
+                {{form}} <br> <br>
+            </div>
+            <div class="submit">
+                <input type="submit" name="submit" id="submit">
+                <a href="{% url 'login' %}"><strong style="color: black; border-radius: 6px; background-color:rgb(21, 128, 252);border: 1px solid black;padding: 3px 5px;">or login</strong></a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

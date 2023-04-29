@@ -1,0 +1,46 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'store/styles.css' %}">{% endblock %}
+{% block title %}cart{% endblock %}
+
+{% block body %}
+    <div class="total">
+        <table>
+            <tr>
+                <th><a href="{% url 'store' %}" id="c_shopping">&#x2190; Continue Shopping</a></th>
+                <th><h3>Items: <strong>{{cartItems}}</strong></h3></th>
+                <th><h3>Total: <strong>${{order.get_cart_total|floatformat:2}}</strong></h3></th>
+                <th><a href="{% url 'checkout' %}" id="checkout">checkout</a></th>
+            </tr>
+        </table>
+    </div>
+    {% for item in items %}
+    <div class="cart_list"> 
+        <table>
+            <tr id="table_top">
+                <div style="flex:2"><th></th></div>
+                <div style="flex:2"><th>item</th></div>
+                <div style="flex:2"><th>price</th></div>
+                <div style="flex:2"><th>Quantity</th></div>
+                <div style="flex:2"><th>Total</th></div>
+            </tr>
+            
+            <tr>
+                <div style="flex:2"><th><img src="{{item.product.imageURL}}" alt=""></th></div>
+                <div style="flex:2"><th>{{item.product.name}}</th></div>
+                <div style="flex:2"><th>${{item.product.price|floatformat:2}}</th></div>
+                <div style="flex:2">
+                    <th>{{item.quantity}}
+                        <div>
+                            <a href="#" data-product={{item.product.id}} data-action="add" class="update_cart btn"><strong>&#8593;</strong></a>
+                            <a href="#" data-product={{item.product.id}} data-action = "remove"class="update_cart btn"><strong>&#8595;</strong></a>
+                        </div>
+                    </th>
+                </div>
+                <div style="flex:2"><th>$ {{item.get_total|floatformat:2}}</th></div>
+            </tr>
+        </table>
+    {% endfor %} 
+    </div>
+
+{% endblock %}

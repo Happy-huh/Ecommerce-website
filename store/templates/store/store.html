@@ -1,0 +1,17 @@
+{% extends 'store/base.html' %}
+{% load static %}
+{% block css %}<link rel="stylesheet" href="{% static 'store/styles.css' %}">{% endblock %}
+{% block title %}store{% endblock %}
+
+{% block body %}
+<div id ="products">
+    {% for product in products %}
+    <div class="product">
+        <img src="{{product.imageURL}}" alt="">
+        <p><strong>{{product.name}}</strong></p>
+        <button class="update_cart" data-product={{product.id}} data-action="add">add to cart</button>
+        <h3>${{product.price|floatformat:2}}</h3>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

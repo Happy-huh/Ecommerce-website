@@ -1,0 +1,166 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(142, 212, 253);
+    overflow-x: hidden;
+}
+#main_nav{
+    display: block;
+    background-color: rgb(18, 167, 253);
+    height: 90px;
+    padding-top: 10px;
+}
+#leftnav{
+    display: inline;
+    position: relative;
+    left: 100px;
+    width: min-content;
+}
+.abitt{
+    position: relative;
+    right: -20px;
+    top: -40px;
+}
+.abit{
+    position: relative;
+    right: -150px;
+    top: -40px;
+}
+.logo{
+    font-size: 28px;
+}
+#main_nav a{
+    text-decoration: none;
+    color: white;
+    margin-top: 5px;
+    padding: 13px;
+}
+#main_nav #login_btn{
+    background-color: yellow;
+    color: black;
+    padding: 8px 12px 6px 12px;
+    position: relative;
+    left: 1000px;
+}
+#cart_img{
+    width: 45px;
+    position: relative;
+    left: 1040px;
+}
+.cart_count{
+    display: inline;
+    background-color: red;
+    border-radius: 45%;
+    padding: 3px;
+    color: white;
+    position: relative;
+    left: 1000px;
+}
+#products{
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.product{
+    width: auto;
+    height: 270px;
+    border-radius: 6px;
+    background-color: white;
+    margin: 12px;
+    box-shadow: 7px 7px 12px black;
+    padding: 3px;
+}
+.product img{
+    width: 250px;
+    height: 170px;
+    border-radius: 6px;
+}
+.product p{
+    padding-bottom: 2px;
+    border-bottom: solid 1px rgb(129, 129, 129);
+}
+.product h3{
+    position: relative;
+    left: 80%;
+    top: -40px;
+}
+.product button{
+    padding: 8px;
+}
+th img{
+    width: 100px;
+    border-radius: 6px;
+}
+th{
+    margin: 40px;
+}
+table{
+    margin-left: 200px;
+    margin-bottom: 44px;
+    margin-top: 20px;
+    width: 750px;
+    height: 100px;
+    box-shadow: 7px 7px 12px black;
+    background-color: white;
+    border-radius: 6px;
+}
+table #checkout{
+    color: white;
+    background-color: rgb(62, 114, 11);
+    padding: 12px 6px 6px 6px;
+    text-decoration: none;
+}
+table #c_shopping{
+    border: 2px solid black;
+    color: black;
+    text-decoration: none;
+    padding: 8px;
+}
+#table_top{
+    border-bottom: 2px solid black;
+    margin-bottom: 2em;
+}
+table .btn{
+    font-size: 28px;
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+}
+.form{
+    width: 750px;
+    background-color: white;
+    border-radius: 6px;
+    margin-left: 150px;
+    margin-top: 10px;
+    padding: 12px;
+}
+input{
+    margin: 5px;
+    font-size: 15px;
+    padding: 6px;
+}
+.hidden{
+    display: none;
+}
+.form #make-payment {
+    text-align: center;
+    color: white;
+    background-color: rgb(21, 87, 21);
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid black;
+    padding: 6px 20px 6px 20px;
+}
+.footer{
+    color: black;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 18px;
+}
+#products{
+    padding-bottom: 3em;
+    border-bottom: 1px solid black;
+}
